@@ -227,5 +227,10 @@ nav a:hover {
         justify-content: flex-start;
     }
 }
-
+.project-year {
+    display: inline-block;
+    color: #F0B86B;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
 
