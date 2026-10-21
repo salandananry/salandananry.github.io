@@ -1,0 +1,68 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page defaults */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101114;
+    color: #F4F4F5;
+}
+
+/* Header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #F4F4F5;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #F0B86B;
+    color: #171717;
+    border-radius: 8px;
+}
+
+.brand-dot {
+    color: #F0B86B;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #D4D4D8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #F0B86B;
+}
