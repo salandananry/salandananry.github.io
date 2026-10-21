@@ -1,19 +1,25 @@
 
-/* Basic reset */
+/* =========================
+   Basic Reset
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page defaults */
+/* =========================
+   Page Defaults
+========================= */
 body {
     font-family: Arial, sans-serif;
     background-color: #101114;
     color: #F4F4F5;
 }
 
-/* Header layout */
+/* =========================
+   Header Layout
+========================= */
 header {
     display: flex;
     justify-content: space-between;
@@ -67,6 +73,9 @@ nav a:hover {
     color: #F0B86B;
 }
 
+/* =========================
+   Skills Section
+========================= */
 #skills {
     padding: 80px 8%;
 }
@@ -112,6 +121,9 @@ nav a:hover {
     border: 1px solid #383943;
     border-radius: 6px;
     font-size: 14px;
+
+    transition: color 0.2s ease,
+                border-color 0.2s ease;
 }
 
 .skill-tags span:hover {
@@ -119,13 +131,9 @@ nav a:hover {
     border-color: #F0B86B;
 }
 
-@media (max-width: 600px) {
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Projects section */
+/* =========================
+   Projects Section
+========================= */
 #projects {
     padding: 80px 8%;
 }
@@ -140,24 +148,33 @@ nav a:hover {
     margin-bottom: 32px;
 }
 
-/* Project list */
+/* Project List */
 .projects-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Individual project row */
+/* =========================
+   Individual Project Row
+========================= */
 .project-card {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
 
+    min-height: 220px;
     padding: 28px;
+
     background-color: #191A20;
     border: 1px solid #30313A;
     border-radius: 12px;
+
+    overflow: hidden;
+    isolation: isolate;
 
     transition: border-color 0.2s ease;
 }
@@ -166,8 +183,39 @@ nav a:hover {
     border-color: #F0B86B;
 }
 
-/* Project information */
+/* Gameplay Video Background */
+.project-background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -2;
+}
+
+/* Dark Gradient Overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(16, 17, 20, 0.95) 0%,
+        rgba(16, 17, 20, 0.80) 40%,
+        rgba(16, 17, 20, 0.45) 75%,
+        rgba(16, 17, 20, 0.25) 100%
+    );
+
+    z-index: -1;
+}
+
+/* Project Information */
 .project-info {
+    position: relative;
     flex: 1;
     min-width: 0;
 }
@@ -177,14 +225,23 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+.project-year {
+    display: inline-block;
+    color: #F0B86B;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
 .project-info p {
-    color: #A1A1AA;
+    color: #D4D4D8;
     font-size: 14px;
     line-height: 1.7;
 }
 
-/* Store buttons */
+/* Project Buttons */
 .project-links {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -215,22 +272,59 @@ nav a:hover {
     border-color: #F0B86B;
 }
 
-/* Responsive layout */
+/* =========================
+   Responsive Layout
+========================= */
 @media (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-        align-items: flex-start;
+    header {
+        flex-wrap: wrap;
         gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .project-card {
+        gap: 20px;
+        padding: 22px;
+    }
+
+    .project-links {
+        justify-content: flex-end;
+    }
+
+    .project-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(16, 17, 20, 0.95) 0%,
+            rgba(16, 17, 20, 0.78) 60%,
+            rgba(16, 17, 20, 0.45) 100%
+        );
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .project-info {
+        flex-basis: 100%;
     }
 
     .project-links {
         justify-content: flex-start;
     }
-}
-.project-year {
-    display: inline-block;
-    color: #F0B86B;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
 
+    .project-background {
+        object-position: center;
+    }
+}
