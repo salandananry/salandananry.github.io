@@ -66,3 +66,62 @@ nav a {
 nav a:hover {
     color: #F0B86B;
 }
+
+#skills {
+    padding: 80px 8%;
+}
+
+#skills h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#skills > p {
+    color: #A1A1AA;
+    margin-bottom: 32px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 24px;
+    background-color: #191A20;
+    border: 1px solid #30313A;
+    border-radius: 12px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    padding: 8px 12px;
+    background-color: #25262E;
+    color: #D4D4D8;
+    border: 1px solid #383943;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.skill-tags span:hover {
+    color: #F0B86B;
+    border-color: #F0B86B;
+}
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
