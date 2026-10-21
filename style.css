@@ -125,3 +125,107 @@ nav a:hover {
     }
 }
 
+/* Projects section */
+#projects {
+    padding: 80px 8%;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#projects > p {
+    color: #A1A1AA;
+    margin-bottom: 32px;
+}
+
+/* Project list */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual project row */
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    padding: 28px;
+    background-color: #191A20;
+    border: 1px solid #30313A;
+    border-radius: 12px;
+
+    transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #F0B86B;
+}
+
+/* Project information */
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #A1A1AA;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Store buttons */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 14px;
+
+    background-color: #25262E;
+    color: #D4D4D8;
+    border: 1px solid #383943;
+    border-radius: 6px;
+
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.2s ease,
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.project-button:hover {
+    color: #101114;
+    background-color: #F0B86B;
+    border-color: #F0B86B;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .project-links {
+        justify-content: flex-start;
+    }
+}
+
+
