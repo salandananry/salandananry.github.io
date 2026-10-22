@@ -330,7 +330,7 @@ nav a:hover {
 }
 .intro-heading {
     text-align: center;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: Consolas, monospace;
     font-size: 36px;
     font-weight: 700;
 }
