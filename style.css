@@ -328,3 +328,9 @@ nav a:hover {
         object-position: center;
     }
 }
+.intro-heading {
+    text-align: center;
+}
+.highlight-orange{
+   color: #FFA200
+}
