@@ -74,6 +74,20 @@ nav a:hover {
 }
 
 /* =========================
+   Intro Heading
+========================= */
+.intro-heading {
+    text-align: center;
+    font-family: Consolas, monospace;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.highlight-orange {
+    color: #FFA200;
+}
+
+/* =========================
    Skills Section
 ========================= */
 #skills {
@@ -183,7 +197,9 @@ nav a:hover {
     border-color: #F0B86B;
 }
 
-/* Gameplay Video Background */
+/* =========================
+   Gameplay Video Background
+========================= */
 .project-background {
     position: absolute;
     inset: 0;
@@ -194,7 +210,8 @@ nav a:hover {
     object-fit: cover;
     object-position: center;
 
-    z-index: -2;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Dark Gradient Overlay */
@@ -210,12 +227,17 @@ nav a:hover {
         rgba(16, 17, 20, 0.25) 100%
     );
 
-    z-index: -1;
+    z-index: 1;
+    pointer-events: none;
 }
 
-/* Project Information */
+/* =========================
+   Project Information
+========================= */
 .project-info {
     position: relative;
+    z-index: 2;
+
     flex: 1;
     min-width: 0;
 }
@@ -238,9 +260,12 @@ nav a:hover {
     line-height: 1.7;
 }
 
-/* Project Buttons */
+/* =========================
+   Project Buttons
+========================= */
 .project-links {
     position: relative;
+    z-index: 2;
 
     display: flex;
     flex-wrap: wrap;
@@ -310,30 +335,37 @@ nav a:hover {
         grid-template-columns: 1fr;
     }
 
+    /* Keep project cards horizontal */
     .project-card {
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 20px;
+        flex-wrap: nowrap;
+        gap: 12px;
+        padding: 16px;
     }
 
     .project-info {
-        flex-basis: 100%;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .project-info h3 {
+        font-size: 17px;
+    }
+
+    .project-info p {
+        font-size: 13px;
     }
 
     .project-links {
-        justify-content: flex-start;
+        flex-shrink: 0;
+        justify-content: flex-end;
+    }
+
+    .project-button {
+        padding: 9px 10px;
+        font-size: 12px;
     }
 
     .project-background {
         object-position: center;
     }
-}
-.intro-heading {
-    text-align: center;
-    font-family: Consolas, monospace;
-    font-size: 36px;
-    font-weight: 700;
-}
-.highlight-orange{
-   color: #FFA200
 }
